@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        The student name is <p id="name">[Who]</p>
+        Today<h4 id="time" style="color: red;"></h4>
+        <!-- You can use `getElementById()` by `id` to change the properties of <h1> -->
+        <button type="button" onclick='document.getElementById("name").innerHTML = "Sepi"'>A</button>
+        <button type="button" onclick='document.getElementById("name").style.display="none"'>B</button>
+        <!-- when the property is set to 'none', the property will disappear and the space will be released -->
+        <button type="button" onclick="document.getElementById('time').innerHTML = Date()">C</button>
+        <button type="button" onclick='document.getElementById("time").style.color="orange"'>D</button>
+    </body>
+</html>

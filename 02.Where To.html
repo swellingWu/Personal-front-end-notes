@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>外部 JavaScript</h2>
+
+<p id="demo">导入函数修改属性 :</p>
+
+<button type="button" onclick="myFunction()">试一试</button>
+
+<button onclick="document.write(5+6)">A</button> 
+<!-- -> 会清空其他属性 -->
+
+<p>(myFunction 存储在名为 "02.js" 的外部文件中)</p>
+<p id="num"></p]>
+
+<script src="/demo/02.js"></script>
+<script>
+    document.getElementById("num").innerHTML = 5 + 7
+    document.write(30+4)//-> 1234
+    window.alert("window.alert() -> 弹窗")
+</script>
+
+</body>
+</html>
