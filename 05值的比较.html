@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body
+    style="
+        	width:100%;
+            height: 100%;
+            background-image: url(./images/background.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 1000px;
+    "
+>
+
+    
+
+</body>
+<script>
+    // alert( null === undefined ); // 当比较的类型不同时 -> false
+    // -> 比较 null 和 0 
+    alert( null > 0 );  // (1) false
+    alert( null == 0 ); // (2) false
+    alert( null >= 0 ); // (3) true -> 进行值的比较时，null 会被转化为数字，null 被转换为数字 0
+    // -> undefined 不应该被与其他值进行比较：
+    // alert( undefined > 0 ); // false (1)
+    // alert( undefined < 0 ); // false (2)
+    // alert( undefined == 0 ); // false (3)
+    // --> null 只与 undefined 互等。
+
+</script>
+</html>

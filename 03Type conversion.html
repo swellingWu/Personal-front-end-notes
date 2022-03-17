@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>当数值和字符串相加时,JavaScript 将把数值视作字符串。</p>
+    <p id="demo"></p>
+</body>
+
+<script>
+    var x = ("a"/"2");
+    document.getElementById("demo").innerHTML = x;
+
+    let str = "123";
+    // alert(typeof str); // string
+    let num = Number(str); // 变成 number 类型 123
+    // alert(typeof num); // number
+
+    // alert( Number("   123   ") ); // 123
+    // alert( Number("123z") );      // NaN（从字符串“读取”数字，读到 "z" 时出现错误）
+    // alert( Number(true) );        // 1
+    // alert( Number(false) );       // 0
+
+    // alert(Boolean(1));// -> true
+    // alert(Boolean(0));// -> flase
+    // alert(Boolean("hello"));
+    // alert(Boolean(""));
+    alert( Boolean(" ") ); // 空白，也是 true（任何非空字符串都是 true）
+    alert(Number(null));// -> 0
+    alert(Number(undefined));// -> Nan
+    alert(Boolean("0"));// -> true
+</script>
+</html>
