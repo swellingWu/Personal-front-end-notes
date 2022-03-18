@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // function pow(x, n) {
+    //     if (n < 0) {
+    //         alert("Negative 'n' not supported");
+    //     } else {
+    //         let result = 1;
+
+    //         for (let i = 0; i < n; i++) {
+    //         result *= x;
+    //         }
+
+    //         return result;
+    //     }
+    // }// ---> 在代码中应该减少嵌套的使用
+
+    // function pow(x, n) {
+    //     if (n < 0) {
+    //         alert("Negative 'n' not supported");
+    //         return;
+    //     }
+
+    //     let result = 1;
+
+    //     for (let i = 0; i < n; i++) {
+    //         result *= x;
+    //     }
+
+    //     return result;
+    // }
+
+    // --> 自描型注释 -> 代码注释的规范
+    function showPrimes(n) {
+        for (let i = 2; i < n; i++) {
+            // if (!isPrime(i)) continue;
+            alert(i);
+        }
+    }
+    function isPrime(n) {
+        for (let i = 2; i < n; i++) {
+            if (n % i == 0) return false;
+        }
+        return true;
+    }
+
+
+</script>
+
+
+</html>
