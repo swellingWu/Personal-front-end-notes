@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15</title>
+</head>
+<body>
+    
+</body>
+
+
+<script>
+    // let user = { name: 'John' };
+    // let admin = user;
+    // admin.name = 'Pete'; // 通过 "admin" 引用来修改
+    // alert(user.name); // 'Pete'，修改能通过 "user" 引用看到
+
+    // -> 克隆
+    let user = {
+        name: "John",
+        age: 30,
+        sizes: {
+            width: 50,
+            height: 182
+        }
+    };
+    let clone = {}; // 新的空对象
+    // 将 user 中所有的属性拷贝到其中
+    for (let key in user) {
+        clone[key] = user[key];
+    }
+    // 现在 clone 是带有相同内容的完全独立的对象
+    clone.name = "Pete"; // 改变了其中的数据
+    // alert( user.name ); // 原来的对象中的 name 属性依然是 John
+
+    let content = Object.assign({},user);
+    alert(user.sizes.width == content.sizes.width)
+    user.sizes.width++;
+    alert(content.sizes.width);
+
+
+</script>
+
+
+</html>
