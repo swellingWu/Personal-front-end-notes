@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18</title>
+</head>
+<body>
+</body>
+
+<script>
+    
+    // function User(name) {
+    //     // this = {};（隐式创建）
+
+    //     // 添加属性到 this
+    //     this.name = name;
+    //     this.isAdmin = false;
+
+    //     // return this;（隐式返回）
+    //     alert(new.target);
+    // }
+    // let user = new User("Jack");
+    // alert(user.name);
+    // alert(user.isAdmin);
+
+    // let x = {
+    //     name: "LIU",
+    //     age: 13,
+    // }
+    // function A() {
+    //     return x;
+    // }
+    // function B() {
+    //     return x;
+    // }
+    // alert(new A() == new B())// -> false
+
+    // ===================================
+
+    function Calculator() {
+        this.read = function() {
+            this.a = +prompt('a?', 0);// -> +prompt -> 字符串前代表正负的符号 -> 数字类型
+            this.b = +prompt('b?', 0);
+        };
+        this.sum = function() {
+            return this.a + this.b;
+        };
+        this.mul = function() {
+            return this.a * this.b;
+        };
+    }
+
+
+
+    let calculator = new Calculator();
+    calculator.read();
+
+    alert( "Sum=" + calculator.sum() );
+    alert( "Mul=" + calculator.mul() );
+
+
+</script>
+</html>

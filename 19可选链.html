@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19</title>
+</head>
+<body>
+</body>
+
+<script>
+    let name = "name";
+    let user = {
+        name: "John"
+    };
+    // alert(user.addrress ? user.addrress.street : "未找到该数据,请重新尝试");
+    // alert(user?.addrress?.street);
+    // alert(user?.addrress);
+    // alert(user?.name);
+
+    // delete user?.name;
+    // alert(user?.name);
+    // -> 我们可以使用 ?. 来安全地读取或删除，但不能写入
+    // user?.name = "John"// -> SyntaxError: Invalid left-hand side in assignment
+
+    alert(user?.[name]);// -> user?.[name] -> user."name" -> user.name -> John
+
+
+    //obj?.prop —— 如果 obj 存在则返回 obj.prop，否则返回 undefined。
+    // obj?.[prop] —— 如果 obj 存在则返回 obj[prop]，否则返回 undefined。
+    // obj.method?.() —— 如果 obj.method 存在则调用 obj.method()，否则返回 undefined
+</script>
+
+</html>

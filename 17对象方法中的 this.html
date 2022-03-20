@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+// let user = {
+//   name: "John",
+//   age: 30,
+
+
+//   say() {
+//       let arrow = () => alert(this.age);
+//       arrow();
+//   },
+
+//   sayHi() {
+//     alert( this.name ); // 当 user=null 时调用 user 导致错误
+//   }
+
+// };
+
+// let admin = user;
+// user = null; // 重写让其更明显
+
+// admin.sayHi(); // TypeError: Cannot read property 'name' of null
+// admin.say();
+
+
+// function makeUser() {
+//   return {
+//     name: "John",
+//     // ref: this,
+//     // makeUser() 中的 this 的值是 undefined，因为它是被作为函数调用的，而不是通过点符号被作为方法调用。
+//     ref() {
+//       return this// this 对应的是所属的函数级
+//     }
+//   };
+// }
+// let user = makeUser();
+// alert(user.ref.name)
+
+// ==> this  计算器
+// let caluculatoe = {
+//   Sum() {
+//     return this.a + this.b;
+//   },
+//   Mul() {
+//     return this.a * this.b;
+//   },
+//   read() {
+//     this.a = +prompt('a?',0);
+//     this.b = +prompt('b?',0);
+//   }
+// };
+// caluculatoe.read();
+// alert(caluculatoe.Sum());
+// alert(caluculatoe.Mul());
+
+let ladder = {
+  step: 1,
+  up() {
+    this.step++;
+  },
+  showStop() {
+    return this.step
+  }
+};
+alert(ladder.step);
+alert("------"+ladder.showStop())
+
+</script>
+</html>
