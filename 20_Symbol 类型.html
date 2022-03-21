@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20</title>
+</head>
+<body>
+</body>
+
+<script>
+    // “Symbol” 值表示唯一的 标识符。
+    // let user = {
+    //     name: "John",
+    // };
+    // let id = Symbol("id");// -> 使用字面量中的 symbol 避免数据冲突
+    // user.id = 64;
+    // user[id] = 1;
+    // alert(user[id]);
+    // alert(user.id);
+    // =======================================
+    // let id = Symbol("id");
+    // let user = {
+    //     name: "John",
+    //     age: 30,
+    //     [id]: 6,
+    // }
+    // for (let key in user) alert(key);
+    // alert("隐藏的 id 为: "+user[id]);
+    // ============================================================
+    // 从全局注册表中读取
+    // let id = Symbol.for("id"); // 如果该 Symbol 不存在，则创建它
+
+    // // 再次读取（可能是在代码中的另一个位置）
+    // let idAgain = Symbol.for("id");
+
+    // // 相同的 Symbol
+    // alert( id === idAgain ); // true
+
+    // alert( Symbol.keyFor(id) ); // name，全局 Symbol
+    // alert( Symbol.keyFor(idAgain) ); // undefined，非全局
+    // ===============================================================
+
+    // ==============================================================
+    // Symbol.toPrimitive 的内建 symbol，它被用来给转换方法命名
+    let user = {
+        name: "John",
+        money: 1000,
+
+        // [Symbol.toPrimitive](hint) {
+        //     alert(`hint: ${hint}`);
+        //     return hint == "string" ? `{name: "${this.name}"}` : this.money;
+        // },// -> 使用了 Symbol 下面的 toString 和 valueOf 就会失效
+        // 如果没有 Symbol.toPrimitive 和 valueOf，toString 将处理所有原始转换。
+        // 当我们需要处理全部原始转换的时候，可以只实现 toString() -> +user -> Nan
+        toString() {
+            return `{------------ name: "${this.name}"}`// -> 当传入对象时触发 toString()
+        },
+        // valueOf() {
+        //     return this.money
+        // }
+    };
+    // ==> 转换演示：=> 唯一强制性的事情是：这些方法必须返回一个原始值，而不是对象。
+    alert(user); // hint: string -> {name: "John"}
+    alert(+user); // hint: number -> 1000
+    alert(user + 500); // hint: default -> 1500
+
+
+</script>
+</html>
