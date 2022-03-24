@@ -47,4 +47,4 @@ let range = {
 let arr = Array.from(range,num => num * num)// => 1,4,9,16,25
 alert(arr);
 
-// 可以应用 for..in 的对象三可迭代的，实现可迭代对象必须实现  Symbol.iterator  方法
+// 可以应用 for..in 的对象三可迭代的，实现可迭代对象必须实现  Symbol.iterator  方法 => Symbol.iterator 方法会被 for..of 自动调用，但我们也可以直接调用它。
