@@ -52,5 +52,5 @@ function sumSalaries(salaries) {
     // return sum;
     
     return Object.values(salaries).reduce((a,b) => a+b,0);
-    //= 将 salaries 转换为数组取值后计算两数之和 => a+b,0为 a b 计算外额外相加的值，此处为 0 意为不相加'
+    //= 将 salaries 转换为数组取值后计算两数之和 => a+b,0为 a b 计算外额外相加的值，此处为 0 意为没有额外的值
 }
