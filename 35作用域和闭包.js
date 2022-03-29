@@ -16,10 +16,18 @@
     // alert(sum(9)(7));
 
 //= 变量的可见性
-let x = 1;
-function func() {
-    alert(x);//! x 在进入函数时进入未初始化状态 => error
-    let x = 2;
-    alert(x);
+    // let x = 1;
+    // function func() {
+    //     alert(x);//! x 在进入函数时进入未初始化状态 => error
+    //     let x = 2;
+    //     alert(x);
+    // }
+    // func();
+
+//? 
+let a = "测试例子a";// ok
+if(true) {
+    alert(a);
+    let b = "测试例子b";
 }
-func();
+alert(b);// error
