@@ -82,6 +82,3 @@ let button = new Button("hello");
 //? 将方法绑定到对象，例如在 constructor 中。
 
 setTimeout(button.click, 1000); //' undefined
-
-
-
