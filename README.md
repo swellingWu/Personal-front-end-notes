@@ -1,2 +1,2 @@
-# javascript-demo
-Collected some basic practices of JavaScript 🐣 Through practice
+# 前端笔记
+**个人记录 => Es6 及Node React 笔记的备份**
